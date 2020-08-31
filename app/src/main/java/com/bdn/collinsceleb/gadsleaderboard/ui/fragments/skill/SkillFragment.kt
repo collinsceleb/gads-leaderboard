@@ -1,12 +1,11 @@
 package com.bdn.collinsceleb.gadsleaderboard.ui.fragments.skill
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bdn.collinsceleb.gadsleaderboard.R
 import com.bdn.collinsceleb.gadsleaderboard.databinding.SkillFragmentBinding
 
 class SkillFragment : Fragment() {
@@ -30,6 +29,8 @@ class SkillFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(SkillViewModel::class.java)
         // TODO: Use the ViewModel
+        binding.skillViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
 }

@@ -29,6 +29,8 @@ class LearningFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(LearningViewModel::class.java)
         // TODO: Use the ViewModel
+        binding.learningViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
 }
